@@ -3,5 +3,8 @@
     "Plan": true,
     "Invoice": true,
     "Subscription": true,
-    "Feature": true
+    "Feature": true,
+    "File": true,
+    "Module": true,
+    "HelpdeskTicket": true
 }

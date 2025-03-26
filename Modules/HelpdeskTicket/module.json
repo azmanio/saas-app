@@ -1,0 +1,11 @@
+{
+    "name": "HelpdeskTicket",
+    "alias": "helpdeskticket",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\HelpdeskTicket\\Providers\\HelpdeskTicketServiceProvider"
+    ],
+    "files": []
+}
