@@ -1,0 +1,7 @@
+{
+    "User": true,
+    "Plan": true,
+    "Invoice": true,
+    "Subscription": true,
+    "Feature": true
+}
