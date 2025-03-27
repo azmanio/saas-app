@@ -10,10 +10,12 @@ return new class extends Migration {
      */
     public function up() : void
     {
-        Schema::create('modules', function (Blueprint $table) {
+        Schema::create('files', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('modul_name');
-            $table->boolean('status')->default(true)->comment('Aktif?');
+            $table->string('file_name');
+            $table->string('file_type');
+            $table->decimal('file_size', 10, 2);
+            $table->string('path');
             $table->timestamps();
         });
     }
@@ -23,6 +25,6 @@ return new class extends Migration {
      */
     public function down() : void
     {
-        Schema::dropIfExists('modules');
+        Schema::dropIfExists('files');
     }
 };

@@ -10,22 +10,15 @@ return new class extends Migration {
      */
     public function up() : void
     {
-        Schema::create('subscriptions', function (Blueprint $table) {
+        Schema::create('features', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->foreignUuid('user_id')
+            $table->foreignUuid('modul_id')
                 ->references('id')
-                ->on('users')
+                ->on('modules')
                 ->cascadeOnDelete()
                 ->cascadeOnUpdate();
-            $table->foreignUuid('plan_id')
-                ->references('id')
-                ->on('plans')
-                ->cascadeOnDelete()
-                ->cascadeOnUpdate();
-            $table->timestamp('start_date');
-            $table->timestamp('end_date')->nullable();
-            $table->integer('qty')->comment('jumlah user');
-            $table->double('price');
+            $table->string('feature_name');
+            $table->text('description');
             $table->boolean('status')->default(true)->comment('Aktif?');
             $table->timestamps();
         });
@@ -36,6 +29,6 @@ return new class extends Migration {
      */
     public function down() : void
     {
-        Schema::dropIfExists('subscriptions');
+        Schema::dropIfExists('features');
     }
 };
