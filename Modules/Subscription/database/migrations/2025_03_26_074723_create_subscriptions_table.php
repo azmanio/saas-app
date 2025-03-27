@@ -24,7 +24,7 @@ return new class extends Migration {
                 ->cascadeOnUpdate();
             $table->timestamp('start_date');
             $table->timestamp('end_date')->nullable();
-            $table->integer('qty')->comment('jumlah user');
+            $table->integer('qty')->comment('jumlah paket');
             $table->double('price');
             $table->boolean('status')->default(true)->comment('Aktif?');
             $table->timestamps();

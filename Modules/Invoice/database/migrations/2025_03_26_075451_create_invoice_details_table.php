@@ -22,7 +22,7 @@ return new class extends Migration {
                 ->on('subscriptions')
                 ->cascadeOnDelete()
                 ->cascadeOnUpdate();
-            $table->integer('qty');
+            $table->integer('qty')->comment('jumlah paket di bulan itu');
             $table->double('price');
             $table->double('price_eqv');
             $table->timestamps();
